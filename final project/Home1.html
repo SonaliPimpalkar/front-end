@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novus connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/di0st/bootstrap.bundle.min.js"></script>
+    <link 
+      rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     />
+     <link 
+     rel="icon" 
+     href="novus logo.jpg"
+     />
+     <style>
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            color: blue;
+            z-index: 1000;
+        }
+        .navlogo img{
+            height: 40px;
+        }
+        .navmenu ul{
+            list-style-type: none;
+            display: flex;
+        }
+        .navmenu li{
+            margin-left: 20px;
+        }
+        .navmenu a{
+            color: blue;
+            text-decoration: none;
+        }
+        .navmenu a:hover{
+            color: yellow;
+        }
+        .navbar3{
+            float: right;
+            background-color: yellow;
+            overflow: hidden;
+            width: 240px;
+        }
+        .navbar3 :hover{
+            color: white;
+        }
+        #header-img{
+            width: 15%;
+            height: 15%;
+            border-radius: 10%;
+        }
+        .second{
+            background-image: url("main1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 500px;
+            color: black;
+        }
+        button{
+            border-radius: 8px;
+            width: 170px;
+            margin-left: 70px;
+            padding: 12px;
+            background-color: yellow;
+            font-size: 20px;
+        }
+        button a{
+            text-decoration: none;
+            color: black;
+        }
+        .second p{
+            padding: 20px;
+            margin: 10px;
+            margin-left: 70px;
+            font-size: 20px;
+        }
+        .second h1{
+            padding-top: 100px;
+            margin: 10px;
+            margin-left: 70px;
+        }
+        .custom-img{
+            width: 80px;
+            height: 60px;
+            image-resolution: 40px;
+        }
+        .custom-card{
+
+            height: 300px;
+        }
+        .forth{
+            display: flex;
+        }
+        .forth1{
+            width: 50%;
+            padding: 15px;
+            margin: 15px;
+        }
+        .eight{
+          
+          display: flex;
+      }
+      .eight1{
+          width: 20%;
+          padding: 5px;
+          text-decoration: none;
+      }
+      footer{
+          background-color: blue;
+          color: white;
+          height: 300px;
+      }
+      .eight5 a{
+          color: white;
+          list-style-type: none;
+          text-decoration: none;
+      }
+      .eight6 a{
+          color: beige;
+          text-decoration: none;
+      }
+        .eight7 a{
+            color: beige;
+            text-decoration: none;
+        }
+        .eight8 a{
+            color: white;
+            text-decoration: none;
+        }
+        .eight4{
+            padding-left: 120px;
+            padding-top: 8px;
+            text-decoration: none;
+        }
+        .myicon{
+            background-color: white;
+            color: black;
+            padding: 9px;
+            border-radius: 60%;
+            float: right;
+        }
+        .myicon:hover{
+            background-color: aqua;
+        }
+        .dropdown-content{
+            padding: 10px;
+            display: none;
+            z-index: 1;
+        }
+        .dropdown-content.active{
+            display: block;
+        }
+        .dropdown-content.row{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 10px;
+        }
+        .dropdown-content.column{
+            flex: 1;
+            margin-left: 10px;
+        }
+        .dropdown-content .dropdown:hover{
+            display: block;
+        }
+     </style>
+</head>
+<body>
+   <nav class="navbar">
+    <div class="navlogo">
+        <a href="#"><img src="novus logo.jpg"></a>
+    </div>
+    <div class="navmenu">
+        <ul>
+            <div class="dropdown" id="productDropdown">
+                <li><a href="#productDropdown" onclick="toggleDropdown('productDropdown')">Products</a><i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <div class="row">
+                            <div class="column">
+                                <h6 style="color: black;">Contact Center Solutions</h6>
+                                <hr>
+                                <h5>iCallMate-cCP</h5>
+                                <a href="">Inbound</a>
+                                <a href="">Inbound</a>
+                                <a href="">Inbound</a>
+                            </div>
+                            <div class="column">
+                                <h6 style="color: black;">Contact Center Solutions</h6>
+                                <hr>
+                                <h5>iCallMate-cCP</h5>
+                                <a href="">Outbound</a>                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div> 
+            <script>
+                function toggleDropdown(productDropdown){
+                    var dropdown=document.getElementById(productDropdown);
+                    dropdown.classList.toggle('active');
+                }
+            </script>       
+            <li><a href="About us.html">About us</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+            <li class="navbar3"><i class="icon">&#9742;</i> +91 9891 33 22 00</li>
+        </ul>
+    </div>
+   </nav>
+   <div class="second">
+    <h1>We Innovate to Simplify</h1>
+    <p>Novus Connect has been the pioneer and leader in providing<br>
+    instant Call-connect solutions inclulding Click-to-call.We<br>
+    deliver the censorious building block to serve the converging<br>
+    internet and telecommunication market segments.
+   </p>
+    <button><a href="About us.html">Learn more--></a></button>
+</div> 
+<div class="third">
+    <h4 style="text-align: center; color: blue;">why choose us.</h4>
+    <h1 style="text-align: center;">WE're Better. Here's Why....</h1>
+    <p style="text-align: center; font-size: 20px;">Novus Connect believes that communication does not have to be as<br>
+    complex as it is.It is mainly working on its vesatility, with whom they can<br>
+     satisfy their customers and highly flexble in accomplishing their targets.</p>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="light.jpg" class="card-img-top mx-auto custom-img" alt="..">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Innovation</h5>
+                    <p class="card-text text-center">Improving Quality, Extension of the product range, Reducing operation cost,improving process,reducing envirmentol damage, Compliances to regulations.</p>
+                    <a href="#" class="btn btn-primary btn-block">go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+           <div class="card">
+                <img src="thumpup.png" class="card-img-top mx-auto custom-img" alt="..">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Satisfaction</h5>
+                    <p class="card-text text-center">Good service is when the customers gets treatment that meets their expection.When a customer gets a little more that what they have expected,good service become exceptional service.</p>
+                    <a href="#" class="btn btn-primary btn-block">go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="flag.png" class="card-img-top mx-auto custom-img" alt="..">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Leader in the domain</h5>
+                    <p class="card-text text-center">We belive that technology plays a major role in implemanting and improving the process. With the same we alaways try to be leader in the technology in our products hence we can serve our customer in better ways which keeps us Apart from the cimpetitor.</p>
+                    <a href="#" class="btn btn-primary btn-block">go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="forth">
+    <div class="forth1">
+        <img src="main2.jpg" width="650px" height="350px">
+    </div>
+    <div class="forth2">
+        <h1 style="padding-top: 45px;">The Ultimate<br>
+        inntercommunication<br>
+    solution</h1>
+    <p>It you to optimize your sales process,Run<br>
+    Marketing compaigns, free and open source<br>
+   framework for building communications applications.<br>
+   It automate their responses to their customers and<br>
+   make it a personalized experience.</p>
+    </div>
+</div>
+<div class="fifth">
+    <h4 style="color: blue; text-align: center; padding-top: 50px;">Produts</h4>
+    <h1 style="text-align: center;">We never forget you have a<br>
+    voice</h1>
+    <p style="text-align: center;">Novus connect provides interactive and conversational voice services.It<br>
+    provides the software and hardwareto convert existing Pc(s) into efficient<br>
+    voice logger, interactive voice Responce(IVR) systems and Dailers, which<br>
+   mainly comprise of multi-channel contact solutions.</p>
+</div>
+<div class="sixth">
+    <img src="main4.jpg" width="1000px" height="400px" style="padding-left: 450px;">
+</div>
+<div class="seventh">
+    <h4 style="text-align: center; color: blue; padding-top: 40px;">They Trust us</h4>
+    <h1 style="text-align: center;">Our Prestigious Clients</h1>
+    <img src="main3.jpg.jpg" width="800px" height="550px" style="margin-left: 250px;">
+</div>
+<footer>
+    <div class="eight">
+        <div class="eight1">
+            <ul class="eight5" style="list-style-type: none;">
+                <li><a href="#">Products</a><ul class="eight6" style="list-style-type: none;">
+                    <li><a href="#">Contact center</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">CPaas voice</a></li>
+                    <li><a href="#">CPaas sms</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        <div class="eight2">
+            <ul class="eight7" style="color: white; list-style-type: none;">
+                <li><a href="#">tracking solution</a></li>
+                <li><a href="#">CPaas Whatsaap</a></li>
+                <li><a href="#">cloud contact center</a></li>
+                <li><a href="#">Unified</a></li>
+                <li><a href="#">Communication platform</a></li>
+            </ul>
+        </div>
+        <div class="eight3">
+            <ul class="eight8" style="list-style-type: none;">
+                <li><a href="#">Quick links</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="eight4">
+            <h6>Subscribe to our newsletter</h6>
+            <form>
+                <label for="code">Monthly Digest of whats new and exciting from us.</label><br>
+                <input type="text" value="E-mail address">
+                <button style="background-color: lightseagreen; width: 100px; padding: 1px; margin-left: 5px;">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <hr />
+    <a href="https://www.facebook.com/login.php/">
+        <i class="fa fa-facebook-f myicon"></i>
+    </a>
+    <a href="https://www.instagram.com/login.php/">
+        <i class="fa fa-instagram myicon"></i>
+    </a>
+    <a href="https://www.twitter.com/login.php/">
+        <i class="fa fa-twitter myicon"></i>
+    </a>
+    <p>2022 novus connected.all rights reserved</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inbound-novus connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/di0st/bootstrap.bundle.min.js"></script>
+    <link 
+      rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     />
+     <link 
+        rel="icon" 
+        href="novus logo.jpg"
+        />
+    <style>
+            .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            color: blue;
+            z-index: 1000;
+        }
+        .navlogo img{
+            height: 40px;
+        }
+        .navmenu ul{
+            list-style-type: none;
+            display: flex;
+        }
+        .navmenu li{
+            margin-left: 20px;
+        }
+        .navmenu a{
+            color: blue;
+            text-decoration: none;
+        }
+        .navmenu a:hover{
+            color: yellow;
+        }
+        .navbar3{
+            float: right;
+            background-color: yellow;
+            overflow: hidden;
+            width: 230px;
+        }
+        .navbar3 :hover{
+            color: white;
+        }
+           .eight{
+        display: flex;
+      }
+      .eight1{
+          width: 20%;
+          padding: 5px;
+      }
+      footer{
+          background-color: blue;
+          color: white;
+          height: 300px;
+      }
+      .eight5 a{
+          color: white;
+          list-style-type: none;
+          text-decoration: none;
+      }
+      .eight6 a{
+          color: beige;
+          text-decoration: none;
+      }
+      .eight7 a{
+            color: beige;
+            text-decoration: none;
+        }
+        .eight8 a{
+            color: white;
+            text-decoration: none;
+        }
+        .eight4{
+            padding-left: 120px;
+            padding-top: 8px;
+        }
+        .myicon{
+            background-color: white;
+            color: black;
+            padding: 9px;
+            border-radius: 60%;
+            float: right;
+        }
+        myicon:hover{
+            background-color: red;
+        }
+         .first{
+            background-image: url(main1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 500px;
+            color: black;
+            display: flex;
+        }
+        .first1{
+            width: 50%;
+        }
+        .first2{
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navlogo">
+            <a href="#"><img src="novus logo.jpg"></a>
+        </div>
+        <div class="navmenu">
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="About us.html">About us</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+                <button class="navbar3"><i class="icon">&#9742;</i> +91 9891 33 22 00</button>
+            </ul>
+        </div>
+       </nav>
+    <div class="first">
+        <div class="first1">
+            <h1 style="padding-top: 120px; padding-left: 150px;">Inbound</h1>
+            <h3 style="padding-left: 150px;">Contact center Solution</h3>
+        </div>
+        <div class="first2">
+            <form class="first3" style="padding-top: 100px; padding-left: 100px;">
+                <label for="name">Name:</label><br>
+                <input type="text" placeholder="full name" id="nm" name="name"><br>
+                <label for="no">Phone</label><br>
+                <input type="number" placeholder="phone no" id="ph" name="phone"><br>
+                <label for="email">Email</label><br>
+                <input type="email" placeholder="abc@gmail.com" id="em" name="email"><br>
+                <label for="company">Company</label><br>
+                <input type="text" placeholder="company name"><br>
+                <button id="mybutton" style="margin-top: 20px; background-color: blue;">Request demo</button>
+            </form>
+        </div>
+        <div id="sucessmessage" class="hidden">
+            Data submitted successfully.
+        </div>
+        <div id="error message" class="hidden">
+            Please fill out all feilds.
+        </div>
+    </div>
+    <script>
+        function clickme(){
+            var name=document.getElementById(nm).value;
+            var phone=document.getElementById(ph).value;
+            var email=document.getElementById(em).value;
+            if(name !=='' && email !=='' && phone !==''){
+                document.getElementById("sucessmessage").classList.remove("hidden");
+                document.getElementById("errormessage").classList.add("hidden");
+                confirm("ok done");
+            }
+            else{
+                document.getElementById("sucessmessage").classList.add("hidden");
+                document.getElementById("errormessage").classList.remove("hidden");
+            }
+        }
+        var button=document.getElementById("mybutton")
+        button.addEventListener("click",clickme);
+    </script>
+    <div class="second">
+        <h3 style="padding: 5px; padding-top: 40px; text-align: center; color: blue;">Inbound</h3>
+        <h2 style="text-align: center;">Features</h2>
+        <p style="text-align: center;">Our inbound call center software gives smart routing to your callers so that they get connected with the right agent based on skill set.This<br>
+         increase first contact resolution rate and help in increasing conversion rate too in sales processes.</p>
+    </div>
+    <div class="third" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px; padding-top: 60px;">
+            <img src="profile1.jpg" width="100px" height="50px">
+            <h1>Queue Management and Call Routing</h1>
+            <p><h3 style="color: blue;">DNIS Based queue:</h3>The route calls based on the DNIS to specific campaigns, skillsets and agents. The<br>
+             system also allows to define the wildcard/prefix to be configured to call routing.
+             <h3 style="color: blue;">Priority queue:</h3>Priority landing of calls to the agent can be configured by priorizing the queue calls<br>
+             based on the customer metedata, call history or based on the selections on the IVR.<br>
+             <h3 style="color: blue;">CLI Based call routing:</h3>VIP or priority customers can be routed separtely by the system to deliver the privilged<br>
+             service.<br>
+             <h3 style="color: blue;">Skillset based Routing:</h3>Calls can be routed to specific group of agents on their skillset.In case there are<br>
+            multi-skill agents. the system delivers the call based on the priority of the agent skill.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;padding-top: 60px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>IVR</h1>
+            <P>IVR uses DTMF& voice-recognition<br>
+             features to route the customers call to<br>
+             specific departments.IVRs vary in sophisticated<br>
+             from the very basic, which enable simple routing<br>
+             functionality,to system that allow customers to<br>
+             access their accounts.At the high end,IVR empowers<br>
+             customer to serve themeselves,reducing the<br>
+             workload on human operators.</P> 
+        </div>
+    </div>
+    <div class="forth" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Call<br>
+             Transfer/Consult/Conference</h1>
+            <p>Agent/tele-caller can transfer the live call to another<br>
+             depatments or permits access to a third party if needed. Along<br>
+             with this they can consult with seniors durinrr the call and can<br>
+             do conferencing also if needed.<br>
+             Being able to transfer a caller to another department or permit,<br>
+             access to a third party, is essential for virtually all contact<br>
+             centers.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;">
+            <img src="headphone.png" width="100px" height="50px">
+            <h1>ACD</h1>
+            <p>A from of ACD is now must a typical contact center.<br>
+             Having a system in place that automatically routes caller to<br>
+             relevant individuals cuts down on wasted time and resources<br>
+             ACD systems distribute calls accroding to user-specified<br>
+             criteria, such as sending to call to phone that is idle or<br>
+             sending calls about billing to the accounting department etc.<br>
+             Nearly all contact center system have some from ACD<br>
+             They vary from simple push-button vitual operators to those<br>
+             that use caller id or voice voice-recognition.</p>
+        </div>
+    </div> 
+    <div class="fifth" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Missed Call Management</h1>
+            <p>Many times,customer disconnect the calls in queue if it takes<br>
+             longer waiting time.The system can br configured to generate<br>
+             the automatic callback to these types of customers to improvre<br>
+             the customer connect.The customer consent can also be taken<br>
+             by the system for the callback.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;">
+            <img src="profile.jpg" width="100px" height="50px">
+            <h1>CRM</h1>
+            <P>With our CRM, create stronger connections with your<br>
+             customers and find everything you need to have relevant<br>
+             conversation with your people,weather you are buildind a<br>
+             brand new audiance or you have thousands of contacts<br>
+             already.Tracking& monitoring the customer tickets,analyze<br>
+             data, generate relevant notifications,automate process are<br>
+             integral part of the CRM.</P>
+        </div>
+    </div>
+    <div class="sixth" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="recording.png" width="100px" height="50px">
+            <h1>Call Recording</h1>
+            <p>Usefull for training and monitoring,call recording allows<br>
+             supervisior and operators to records and store phone calls<br>
+              as audio file on the server./p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;">
+            <img src="message.png" width="100px" height="50px">
+            <h1>SMS Integration</h1>
+            <p>Dialer can be customized to send the SMS to the<br>
+                customers  based on the call dispostion/closure types.<br>
+                Http links like payment, customer feedback etc. can<br>
+                also be sent to the cystomers to improve the customer<br>
+               enggment.</p>
+        </div>
+    </div>
+    <div style="padding: 30px; padding-left: 80px;">
+        <img src="whatsapp.png" width="100px" height="50px">
+        <h1>WhatsApp Integration</h1>
+        <p>Dialer can be customized to send the whatsappto the<br>
+         customers based on the call dispostion/closure types.<br>
+         Http links like payment,customer feedback etc. can<br>
+         also be sent to the cystomers to improve the customer<br>
+        enggment.The message can contain the imges and videos.</p>
+    </div>
+    <button style="margin-left: 600px; background-color: darkorange;"><a style="text-decoration: none; color: black;" href="Contact.html">Request demo--></a></button>
+    <div class="seven">
+        <h4 style=" text-align: center; color: blue; padding-top: 50px;">They trust us</h4>
+        <h1 style="text-align: center;">Our Prestigious Clients</h1>
+        <img src="main3.jpg.jpg" width="1000px" height="400px" style="padding-left: 200px;">
+    </div>
+    <footer>
+        <div class="eight">
+            <div class="eight1">
+                <ul class="eight5" style="list-style-type: none;">
+                    <li><a href="#">Products</a><ul class="eight6" style="list-style-type: none;">
+                        <li><a href="#">Contact center</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">CPaas voice</a></li>
+                        <li><a href="#">CPaas sms</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="eight2">
+                <ul class="eight7" style="color: white; list-style-type: none;">
+                    <li><a href="#">tracking solution</a></li>
+                    <li><a href="#">CPaas Whatsaap</a></li>
+                    <li><a href="#">cloud contact center</a></li>
+                    <li><a href="#">Unified</a></li>
+                    <li><a href="#">Communication platform</a></li>
+                </ul>
+            </div>
+            <div class="eight3">
+                <ul class="eight8" style="list-style-type: none;">
+                    <li><a href="#">Quick links</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="eight4">
+                <h6>Subscribe to our newsletter</h6>
+                <form>
+                    <label for="code">Monthly Digest of whats new and exciting from us.</label><br>
+                    <input type="text" value="E-mail address">
+                    <button style="background-color: rgb(87, 157, 154); width: 100px; padding: 1px; margin-left: 5px;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <a href="https://www.facebook.com/login.php/">
+            <i class="fa fa-facebook-f myicon"></i>
+        </a>
+        <a href="https://www.instagram.com/login.php/">
+            <i class="fa fa-instagram myicon"></i>
+        </a>
+        <a href="https://www.twitter.com/login.php/">
+            <i class="fa fa-twitter myicon"></i>
+        </a>
+        <p>2022 novus connected.all rights reserved</p>
+    </footer>    
+</body>
+</html>

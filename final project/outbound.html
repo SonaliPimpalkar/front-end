@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outbound-novusconnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/di0st/bootstrap.bundle.min.js"></script>
+    <link 
+      rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     />
+     <link 
+        rel="icon" 
+        href="novus logo.jpg"
+        />
+    <style>
+           .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            color: blue;
+            z-index: 1000;
+        }
+        .navlogo img{
+            height: 40px;
+        }
+        .navmenu ul{
+            list-style-type: none;
+            display: flex;
+        }
+        .navmenu li{
+            margin-left: 20px;
+        }
+        .navmenu a{
+            color: blue;
+            text-decoration: none;
+        }
+        .navmenu a:hover{
+            color: yellow;
+        }
+        .navbar3{
+            float: right;
+            background-color: yellow;
+            overflow: hidden;
+            width: 230px;
+        }
+        .navbar3 :hover{
+            color: white;
+        }
+         .first{
+            background-image: url(main1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 500px;
+            color: black;
+            display: flex;
+        }
+        .first1{
+            width: 50%;
+        }
+        .first2{
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .hidden{
+            display: none;
+        }
+        .eleven{
+        display: flex;
+      }
+        .eight1{
+          width: 20%;
+          padding: 5px;
+      }
+      footer{
+          background-color: blue;
+          color: white;
+          height: 300px;
+      }
+      .eight5 a{
+          color: white;
+          list-style-type: none;
+          text-decoration: none;
+      }
+      .eight6 a{
+          color: beige;
+          text-decoration: none;
+      }
+      .eight7 a{
+            color: beige;
+            text-decoration: none;
+        }
+        .eight8 a{
+            color: white;
+            text-decoration: none;
+        }
+        .eight4{
+            padding-left: 120px;
+            padding-top: 8px;
+        }
+        .myicon{
+            background-color: white;
+            color: black;
+            padding: 9px;
+            border-radius: 60%;
+            float: right;
+        }
+        myicon:hover{
+            background-color: red;
+        }
+        i{
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navlogo">
+            <a href="#"><img src="novus logo.jpg"></a>
+        </div>
+        <div class="navmenu">
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="About us.html">About us</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+                <button class="navbar3"><i class="icon">&#9742;</i> +91 9891 33 22 00</button>
+            </ul>
+        </div>
+       </nav>
+    <div class="first">
+        <div class="first1">
+            <h1 style="padding-top: 120px; padding-left: 150px;">Outbound</h1>
+            <h3 style="padding-left: 150px;">Contact center Solution</h3>
+        </div>
+        <div class="first2">
+            <form class="first3" style="padding-top: 100px; padding-left: 100px;">
+                <label for="name">Name:</label><br>
+                <input type="text" placeholder="full name" id="nm" name="name"><br>
+                <label for="no">Phone</label><br>
+                <input type="number" placeholder="phone no" id="ph" name="phone"><br>
+                <label for="email">Email</label><br>
+                <input type="email" placeholder="abc@gmail.com" id="em" name="email"><br>
+                <label for="company">Company</label><br>
+                <input type="text" placeholder="company name"><br>
+                <button id="mybutton" style="margin-top: 20px; background-color: blue;">Request demo</button>
+            </form>
+        </div>
+        <div id="sucessmessage" class="hidden">
+            Data submitted successfully.
+        </div>
+        <div id="error message" class="hidden">
+            Please fill out all feilds.
+        </div>
+    </div>
+    <script>
+        function clickme(){
+            var name=document.getElementById(nm).value;
+            var phone=document.getElementById(ph).value;
+            var email=document.getElementById(em).value;
+            if(name !=='' && email !=='' && phone !==''){
+                document.getElementById("sucessmessage").classList.remove("hidden");
+                document.getElementById("errormessage").classList.add("hidden");
+                confirm("ok done");
+            }
+            else{
+                document.getElementById("sucessmessage").classList.add("hidden");
+                document.getElementById("errormessage").classList.remove("hidden");
+            }
+        }
+        var button=document.getElementById("mybutton")
+        button.addEventListener("click",clickme);
+    </script>
+    <div class="second">
+        <h3 style="padding: 5px; padding-top: 40px; text-align: center; color: blue;">outbound</h3>
+        <h2 style="text-align: center;">Features</h2>
+    </div>
+    <div class="third" style="display: flex;">
+        <div style="padding: 10px; padding-left: 100px;">
+            <img src="profile.jpg" width="100px" height="50px">
+            <h1>Predictive Dialer</h1>
+            <p>A predictive dialer is a system which automated the outbound calling that allows the<br>
+            business to dial the pre uploaded customer numbers.Predictive dialer filters busy signals<br>
+           voicemail,noanswers, andv disconnected numbers to connect the agent only when the<br>
+           customers answers the call.<br>
+           the predictive dialers uses advanced algoritham to get exact time that an agent should<br>
+           be wrapping up a call and only then bulk dials other numbers.The predictive dialrs also<br>
+           uses the pacing to dial more customersnumbers simultaneously based on the live call<br>
+          connect ratio.The objective of the using predictive dialrs is to increase agent efficiency<br>
+          by automating the dialing.</p>
+        </div>
+        <div style="padding: 10px; padding-left: 200px;">
+            <img src="eye.png" width="100px" height="50px">
+            <h1>Preview Dialers</h1>
+            <p>Many times agent needs to analiyze<br>
+             the customer data before dailing<br>
+            The preview calling help the<br>
+            business the achieve this.Data is<br>
+           presented to the agent by the dialer<br>
+          and then agent initiates the dailing<br>
+          using the dial button on the<br>
+         application.</p>
+        </div>
+    </div>
+    <div class="forth" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="headphone.png" width="100px" height="50px">
+            <h1>Sticky- Agent</h1>
+            <p>The supervisior can do agent wise<br>
+            allocatin of data to specific agent<br>
+           for target based dialing.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;">
+            <img src="profile1.jpg" width="100px" height="50px">
+            <h1>Skill-based Dialing</h1>
+            <p>The supervisior can upload the<br>
+            skillset based data like language<br>
+        product etc.The agents can be of<br>
+       multiple skill also.The dialer will<br>
+       dial the calls bases on the agent<br>
+    skillset.This will help the business<br>
+    to connect thwe customer with the<br>
+    best avilable agent.</p>
+     </div>
+    </div>
+    <div class="fifth" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="profile1.jpg" width="100px" height="50px">
+            <h1>Leadset Management</h1>
+            <p>These systems enable different calls to be tagged and stored<br>
+             with relevant information attached to the call file.This permits<br>
+             better management of customers,as it provides historical<br>
+             records of all calls by individual accounts holder.The data<br>
+             uploaded in dialer can be maneged by supervisiors for analysis<br>
+            re-chump,re-allocatin, blocking specific type of data<br>
+            The ease of the supervisior to mange the campaign ans leadset.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;">
+            <img src="click.png" width="100px" height="50px">
+            <h1>Click-to-Call</h1>
+            <p>Click to Call features is to automate the dialing fron the CRM<br>
+             The dialer automatically intiaties the first call to agent.The<br>
+             moment agent answers the call,dialers dial the customers and<br>
+             bridge the call.It help the agent toconnect with the customers<br>
+             on single click which improves the agent efficiently<br>
+             exponentially.It also provides data security to the customer as<br>
+             well as enterprises.</p>
+        </div>
+    </div>
+    <div class="sixth" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="setting.png" width="100px" height="50px">
+            <h1>Data seeding APIs</h1>
+            <p>The platform is capable to recive the data/lead from<br>
+             the rest/soap APIs.The routing& priority if this<br>
+             data can be done based on the metadata<br>
+             recived from the APIs.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 190px;">
+            <img src="fingureprint.jpg" width="100px" height="50px">
+            <h1>Personal Identity Information<br>
+             (PII) Data protection</h1>
+            <p>The platfrom can be configured to mask or hide<br>
+            the customers data like contact no,email etc.<br>
+            This help in data protection and data theft.</p>
+        </div>
+    </div>
+    <div class="seven" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="clock.png" width="100px" height="50px">
+            <h1>Callback/Follow-up Management</h1>
+            <p>Callback by the agent will be automatically dialed<br>
+             by the dialer based on the call back time.The<br>
+             routing of the callbacks can be set to works on<br>
+             any agent or sticky agent basis.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Call Consult/Conference</h1>
+            <p>While talking with the customer agent can consult<br>
+             their internal or external consultant/supervisors<br>
+            during the live call and they can even do multi-<br>
+            party call conferencing if required.</p>
+        </div>
+    </div>
+    <div class="eigtht" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Call Transfer</h1>
+            <p>Agent can transfer the live call to another<br>
+             person or to another department.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 220px;">
+            <img src="round arrow.png" width="100px" height="50px">
+            <h1>CLI Mangement</h1>
+            <p>The system keeps rotating the calling the spamming by the customers.<br>
+             The rotation of CLI can be set according to the business need like<br>
+             daily or on each attempt.</p>
+        </div>
+    </div>
+    <div class="nine" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="profile1.jpg" width="100px" height="50px">
+            <h1>CRM</h1>
+            <p>With our CRM create stronger connections with your<br>
+             customers and find every thing you need to have<br>
+             relevant conversation with your people- weather you<br>
+             are building a brand new audiance or you have thousands<br>
+            of contacts already tracking and monitoring the customer<br>
+            tickets,analiyze data,generate relevant notifications.<br>
+            automate process are integral part of the CRM.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;">
+            <img src="recording.png" height="50px" width="100px">
+            <h1>Call Recording</h1>
+            <p>Usefull training and quality add, the call<br>
+            recording allows supervisiors and operations<br>
+            to record and store phone calls as audio<br>
+            files on the servser.</p>
+        </div>
+    </div>
+    <div class="ten" style="display: flex;">
+        <div style="padding: 30px; padding-left: 80px;">
+            <img src="message.png" width="100px" height="50px">
+            <h1>SMS Integration</h1>
+            <p>Dialer can be customized to send the SMS to the<br>
+             customers  based on the call dispostion/closure types.<br>
+             Http links like payment, customer feedback etc. can<br>
+             also be sent to the cystomers to improve the customer<br>
+            enggment.</p>
+        </div>
+        <div style="padding: 30px; padding-left: 170px;">
+            <img src="whatsapp.png" width="100px" height="50px">
+            <h1>WhatsApp Integration</h1>
+            <p>Dialer can be customized to send the whatsappto the<br>
+             customers based on the call dispostion/closure types.<br>
+             Http links like payment,customer feedback etc. can<br>
+             also be sent to the cystomers to improve the customer<br>
+            enggment.The message can contain the imges and videos.</p>
+        </div>
+    </div>
+    <button style="margin-left: 600px; background-color: darkorange;"><a style="text-decoration: none; color: black;" href="Contact.html">Request demo--></a></button>
+    <div class="elevion">
+        <h4 style=" text-align: center; color: blue; padding-top: 50px;">They trust us</h4>
+        <h1 style="text-align: center;">Our Prestigious Clients</h1>
+        <img src="main3.jpg.jpg" width="1000px" height="400px" style="padding-left: 200px;">
+    </div>
+    <footer>
+        <div class="eleven">
+            <div class="eight1">
+                <ul class="eight5" style="list-style-type: none;">
+                    <li><a href="#">Products</a><ul class="eight6" style="list-style-type: none;">
+                        <li><a href="#">Contact center</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">CPaas voice</a></li>
+                        <li><a href="#">CPaas sms</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="eight2">
+                <ul class="eight7" style="color: white; list-style-type: none;">
+                    <li><a href="#">tracking solution</a></li>
+                    <li><a href="#">CPaas Whatsaap</a></li>
+                    <li><a href="#">cloud contact center</a></li>
+                    <li><a href="#">Unified</a></li>
+                    <li><a href="#">Communication platform</a></li>
+                </ul>
+            </div>
+            <div class="eight3">
+                <ul class="eight8" style="list-style-type: none;">
+                    <li><a href="#">Quick links</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="eight4">
+                <h6>Subscribe to our newsletter</h6>
+                <form>
+                    <label for="code">Monthly Digest of whats new and exciting from us.</label><br>
+                    <input type="text" value="E-mail address">
+                    <button style="background-color: rgb(87, 157, 154); width: 100px; padding: 1px; margin-left: 5px;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <a href="https://www.facebook.com/login.php/">
+            <i class="fa fa-facebook-f myicon"></i>
+        </a>
+        <a href="https://www.instagram.com/login.php/">
+            <i class="fa fa-instagram myicon"></i>
+        </a>
+        <a href="https://www.twitter.com/login.php/">
+            <i class="fa fa-twitter myicon"></i>
+        </a>
+        <p>2022 novus connected.all rights reserved</p>
+    </footer>    
+</body>
+</html>

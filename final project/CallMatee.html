@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callmatee-novus connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/di0st/bootstrap.bundle.min.js"></script>
+    <link 
+      rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+     />
+     <link 
+        rel="icon" 
+        href="novus logo.jpg"
+        />
+    <style>
+         .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            color: blue;
+            z-index: 1000;
+        }
+        .navlogo img{
+            height: 40px;
+        }
+        .navmenu ul{
+            list-style-type: none;
+            display: flex;
+        }
+        .navmenu li{
+            margin-left: 20px;
+        }
+        .navmenu a{
+            color: blue;
+            text-decoration: none;
+        }
+        .navmenu a:hover{
+            color: yellow;
+        }
+        .navbar3{
+            float: right;
+            background-color: yellow;
+            overflow: hidden;
+            width: 230px;
+        }
+        .navbar3 :hover{
+            color: white;
+        }
+        .first{
+            background-image: url(main1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 500px;
+            color: black;
+            display: flex;
+        }
+        .first1{
+            width: 50%;
+        }
+        .first2{
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .hidden{
+            display: none;
+        }
+        .card-body-custom{
+            height: 300px;
+            padding: 100px;
+        }
+        .custom-card{
+            height: 300px;
+            padding: 50px;
+        }
+        .eight{
+        display: flex;
+      }
+      .eight1{
+          width: 20%;
+          padding: 5px;
+      }
+      footer{
+          background-color: blue;
+          color: white;
+          height: 300px;
+      }
+      .eight5 a{
+          color: white;
+          list-style-type: none;
+          text-decoration: none;
+      }
+      .eight6 a{
+          color: beige;
+          text-decoration: none;
+      }
+      .eight7 a{
+            color: beige;
+            text-decoration: none;
+        }
+        .eight8 a{
+            color: white;
+            text-decoration: none;
+        }
+        .eight4{
+            padding-left: 120px;
+            padding-top: 8px;
+        }
+        .myicon{
+            background-color: white;
+            color: black;
+            padding: 9px;
+            border-radius: 60%;
+            float: right;
+        }
+        myicon:hover{
+            background-color: red;
+        }
+        i{
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navlogo">
+            <a href="#"><img src="novus logo.jpg"></a>
+        </div>
+        <div class="navmenu">
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="About us.html">About us</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+                <button class="navbar3"><i class="icon">&#9742;</i> +91 9891 33 22 00</button>
+            </ul>
+        </div>
+       </nav>
+    <div class="first">
+        <div class="first1">
+            <h1 style="padding-top: 120px; padding-left: 130px;">iCallMate-eCP</h1>
+            <h4 style="padding-left: 150px;">CpaaS voice</h4>
+        </div>
+        <div class="first2">
+            <form class="first3" style="padding-top: 100px; padding-left: 100px;">
+                <label for="name">Name:</label><br>
+                <input type="text" placeholder="full name" id="nm" name="name"><br>
+                <label for="no">Phone</label><br>
+                <input type="number" placeholder="phone no" id="ph" name="phone"><br>
+                <label for="email">Email</label><br>
+                <input type="email" placeholder="abc@gmail.com" id="em" name="email"><br>
+                <label for="company">Company</label><br>
+                <input type="text" placeholder="company name"><br>
+                <button style="margin-top: 20px; background-color: blue;" onclick="clickme()">Request demo</button>
+            </form>
+        </div>
+        <div id="sucessmessage" class="hidden">
+            Data submitted successfully.
+        </div>
+        <div id="error message" class="hidden">
+            Please fill out all feilds.
+        </div>
+    </div>
+    <script>
+        function clickme(){
+            var name=document.getElementById(nm).value;
+            var phone=document.getElementById(ph).value;
+            var email=document.getElementById(em).value;
+            if(name !=='' && email !=='' && phone !==''){
+                document.getElementById("sucessmessage").classList.remove("hidden");
+                document.getElementById("errormessage").classList.add("hidden");
+            }
+            else{
+                document.getElementById("sucessmessage").classList.add("hidden");
+                document.getElementById("errormessage").classList.remove("hidden");
+            }
+        }
+    </script>
+    <div class="second" style="display: flex; background-color: whitesmoke; margin: 50px;">
+        <div>
+            <img src="main13.png" width="400px">
+        </div>
+        <div style="padding-left: 40px;">
+            <h1>CPaaS</h1>
+            <p>The iCallMate-CPaaS platform delivers a tightly interated toolbox<br>
+             of APIs and servicses that enable the delivery of real-time voice and<br>
+             messaging solutions.User-friendly features like an infuitive<br>
+             interface and turnkey applications allow communication providers<br>
+             to go to market quickly meets customers needs.<br>
+             communications platform as a service or CPaaS is cloud based<br>
+             delivery model that focuses on improving communication channels<br>
+             Its model that allows companies to add various communication<br>
+             features to their existing business application.Added capbilities<br>
+             like voice, video and SMS can be deployed through communication<br>
+             APIs(Application Program Interface)</p>
+             <button style="background-color: darkorange;"><a style="text-decoration: none; color: black;" href="Contact.html">Request a Demo--></a></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body card-body-custom text-center">
+                        <img src="label.png" width="100px" height="50px">
+                        <h5 class="card-title">Whitelabeling</h5>
+                        <p class="card-text">Launch a CPaaS brand in just days<br>
+                         with documentation and a customer<br>
+                         interface.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body card-body-custom text-center">
+                        <img src="profile2.png" width="100px" height="50px">
+                        <h5 class="card-title">Reseller Management</h5>
+                        <p class="card-text">Create reseller and sub-reseller on the platform as a selfservice.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body card-body-custom text-center">
+                        <img src="arrow.png" width="100px" height="50px">
+                        <h5 class="card-title">Credit Management</h5>
+                        <p class="card-text">Do credit allocation,reversal on the fly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5" style="margin-left: 400px;">
+        <div class="row-justify-content-center">
+            <div class="col-sm-6">
+                <div class="card custom-card">
+                    <div class="card-body text-center">
+                        <img src="setting.png" width="40px" height="20px">
+                        <h5 class="card-title">Rich APIs</h5>
+                        <p class="card-text">CPaaS (Communication Platform as a service)providers sell the necessary platform and code to integrate their SMS APIs into your existing application,unlocking SMS capbilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: whitesmoke; padding: 30px; margin: 50px;">
+        <h1>CPaaS-voice</h1>
+        <p>iCall-mate is an enterprise grade platform provinding fast,secure, and reliable voice servicses for A2P SMS traffic.This voice CPaas<br>
+        platform provides you with a comprehensive cost-effictive solution that has exhasusting features such as the enterpriseing voice<br>
+        communication to enable operations and scale business.<br>
+        It support features like live traffic monitor,dynamic routing, routing and chgarging, reday to offer white lable solution platform.<br>
+        Balance management,service management, huge array of reports,SMPP based API connection and more.</p>
+        <h6 style="text-align: center; padding-top: 150px; color: blue;">Services being offered on CPaas voice platform.</h6>
+        <h1 style="text-align: center;">OBD</h1>
+    </div>
+    <div class="third" style="display: flex;">
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Outbound voice calls</h1>
+            <p>Create OBD campaigns like responsive ,non-<br>
+             responsive,surveys, call patching& customer call<br>
+             floe etc.Run multiple campaigns simultaneouly with<br>
+             different call flow.Monitor, enable,disable,<br>
+             rechurn live campaign using the campaign<br>
+             dashboard.</p>
+        </div>
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 40px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Inbound call routing</h1>
+            <p>Make your incoming call processing easy with call routing.It works through<br>
+             webhooks.As a call comes in,a webhook is triggered,and the system<br>
+             follows a set of instructions on what to do the call. In constract. inbound<br>
+             call center platform provides allthis without any programming.<br>
+             These instruction can be to route the callto a certain recipient so you can<br>
+             customize and streamline hoe you handle incoming calls-exta helpfull in<br>
+             busy seasons.</p>
+        </div>
+    </div>
+    <div class="forth" style="display: flex;">
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="recording.png" width="100px" height="50px">
+            <h1>Audio Library</h1>
+            <p>Users can relate their own audio<br>
+             library for the audio prompts to be<br>
+             used when uploading campaign.<br>
+             Once the audio files are approved<br>
+             by the approver,can be used in the<br>
+             call flows.</p>
+        </div>
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 40px;">
+            <img src="profile1.jpg" width="100px" height="50px">
+            <h1>Contact<br> Management</h1>
+            <p>Users can cerate their own contact<br>
+             list to be used in uploading<br>
+             campaign.Contact groups can be<br>
+             used for running campaigns etc.</p>
+        </div>
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 40px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>IVR Studio</h1>
+            <p>IVR studio is a self service call flow<br>
+             creation portal.Usesrs can create call<br>
+             flow using the drag-drop panel for<br>
+             play promots,getting user inputs,<br>
+             disconnecting calls,APIs etc.</p>
+        </div>  
+    </div>
+    <div class="fifth" style="display: flex;">
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Custom Call Flows</h1>
+            <p>Create complex call flows which<br>
+             include the APIs & database<br>
+             integrations using the customer call<br>
+             flow builder.Add call flow IVR rules<br>
+             as per the need and map those call<br>
+             flow to users for uploading campaign.</p>
+        </div>
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="setting.png" width="100px" height="50px">
+            <h1>Extensive APIs</h1>
+            <p>You can take advantage of voice APIs/web panels and emed outgoing calling to your<br>
+             communication stack.Its great for scalingupand down based on youe needs, and you<br>
+             can get new phone numbers and calling features almost instantly.<br>
+             voice APIs for outgoing calls is idealwhen you need toadapt quickly to a charging<br>
+             environment and incraese or decrease your calling capacity.</p>
+        </div>
+    </div>
+    <div class="sixth" style="display: flex;">
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="pririty queue.png" width="100px" height="50px">
+            <h1>Priority Queues</h1>
+            <p>Priotize call dailing for specific<br>
+             usres and campaign based on<br>
+             OTPs and APIs campaigns. platform<br>
+             executes campaigns and calls basis<br>
+             the pririty Queues.</p>
+        </div>
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="bill.png" width="100px" height="50px">
+            <h1>Bill Plans</h1>
+            <p>Create bill plans & map with<br>
+             resellers & usres for promo & Trans<br>
+             campaigns separartly.</p>
+        </div>
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="bar graph.png" width="100px" height="50px">
+            <h1>Reporting</h1>
+            <p>Reporting dashboard to generate<br>
+             the analytical summary and detial<br>
+             reports. Scheduling of reports auto<br>
+             deliver reports in mails & FTP<br>
+             uploading etc.</p>
+        </div>
+    </div>
+    <div class="seven" style="display: flex;">
+      
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left:40px;">
+            <img src="click.png" width="100px" height="50px">
+            <h1>Click2Call</h1>
+            <p>Click to call is telephony solution feature that<br>
+             lets you dial a customers number by just clicking<br>
+             on the number,without the need of mutally<br>
+             dailing.This cuts manual dailing for agent and<br>
+             leads to a signficant improvrment in agent<br>
+             productivity.<br>
+             Empowers your team & save agents calling time<br>
+             with an easy and simple click to call solution of<br>
+             iCall-mate platform.<br>
+             Customers can configuer click to call, voice<br>
+             recording and callback CDR APIs in theor CRMs.<br>
+             Mobile APPs etc.</p>
+        </div>
+        <div style="padding: 100px; padding-top: 100px; padding-left: 200px;">
+            <img src="main12.jpg" width="400px" height="300px">
+        </div> 
+    </div>
+    <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left:40px;">
+        <h1>IVR</h1>
+        <P>iCall-mate IVR is programmable, flexible & robust to meet any kind of navigation requirements like<br>
+             http APIs,database integration, voiceXML, Call routing,responsive and non-responsive campaign,call patching,<br>
+             surveys etc. call flows can be created using the rule based engine as well as drag -drop based IVR stdio.</P>
+    </div>
+    <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left:40px;">
+        <h1>campaign Manage</h1>
+        <p><h4 style="color: blue;">Omnichannel,large capacity</h4>We retain our customers with our excellent servicses not with the binding agreements, try our cloud call center solution and we bet<br>
+             you will become our loyal customer because of your service and 24/7 availble technical support.<br>
+             <h4 style="color: blue;">No coding required</h4>Minimize reliance on development resources or timr neede to create,schedule, and send campaign<br>
+             <h4 style="color: blue;">Voice support with IVR</h4>Link with visual designer to create bi-directional call flows to cnnect customer feedback, conduct polls, and route calls to agents.<br>
+             <h4 style="color: blue;">Personlize message</h4>Using templates and user defined vaiables add personlization and context.<br>
+             <h4 style="color: blue;">Scheduler</h4>Schedule campaign to run in future.</p>
+    </div>
+    <div class="eight" style="display: flex;">
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Programmble IVR</h1>
+            <p>Build your own interactive voice<br>
+             response IVR system in minutes.<br>
+             Route your incoming calls to user<br>
+             departments and Mobile device.</p>
+        </div>
+        <div style="background-color: whitesmoke; padding: 20px; margin: 20px; margin-left: 50px;">
+            <img src="phone.png" width="100px" height="50px">
+            <h1>Call Routing</h1>
+            <p>Interactive voice responce, or IVR,routung gives caller the freedom to choose from a<br>
+             predefined list the department to which they would like to connect.<br>
+             Location based routing identifies a caaler location using his<br>
+             telephone number and route his call to the most appropiate agent or department based<br>
+              on locally.</p>
+        </div>
+    </div>
+    <div class="nine" style="display: flex;">
+        <div style="padding-top: 100px; padding-left: 150px;">
+            <img src="main14.png" width="300px" height="200px">
+        </div>
+        <div style="padding: 100px; padding-left: 150px;">
+            <img src="headphone.png" width="100px" height="50px">
+            <h1>Missed call</h1>
+            <p>You can publish your unique missed call number<br>
+             in print media, website, app and SMS campaign.</p>
+        </div>
+    </div>
+    <div class="ten">
+        <h4 style="text-align: center; color: blue; padding-top: 30px;">They trust us</h4>
+        <h1 style="text-align:center ;">Our Prestigious Clients</h1>
+        <img src="main3.jpg.jpg" width="800px" height="450px" style="margin-left: 250px;">
+    </div>
+    <footer>
+        <div class="eight">
+            <div class="eight1">
+                <ul class="eight5" style="list-style-type: none;">
+                    <li><a href="#">Products</a><ul class="eight6" style="list-style-type: none;">
+                        <li><a href="#">Contact center</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">CPaas voice</a></li>
+                        <li><a href="#">CPaas sms</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="eight2">
+                <ul class="eight7" style="color: white; list-style-type: none;">
+                    <li><a href="#">tracking solution</a></li>
+                    <li><a href="#">CPaas Whatsaap</a></li>
+                    <li><a href="#">cloud contact center</a></li>
+                    <li><a href="#">Unified</a></li>
+                    <li><a href="#">Communication platform</a></li>
+                </ul>
+            </div>
+            <div class="eight3">
+                <ul class="eight8" style="list-style-type: none;">
+                    <li><a href="#">Quick links</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="eight4">
+                <h6>Subscribe to our newsletter</h6>
+                <form>
+                    <label for="code">Monthly Digest of whats new and exciting from us.</label><br>
+                    <input type="text" value="E-mail address">
+                    <button style="background-color: rgb(87, 157, 154); width: 100px; padding: 1px; margin-left: 5px;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <a href="https://www.facebook.com/login.php/">
+            <i class="fa fa-facebook-f myicon"></i>
+        </a>
+        <a href="https://www.instagram.com/login.php/">
+            <i class="fa fa-instagram myicon"></i>
+        </a>
+        <a href="https://www.twitter.com/login.php/">
+            <i class="fa fa-twitter myicon"></i>
+        </a>
+        <p>2022 novus connected.all rights reserved</p>
+    </footer>  
+</body>
+</html>
